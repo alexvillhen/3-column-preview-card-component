@@ -1,0 +1,154 @@
+/*============
+	GLOBAL
+=============*/
+
+:root{
+	--orange:hsl(31, 77%, 52%);
+	--cyan:hsl(184, 100%, 22%);
+	--dark-cyan:hsl(179, 100%, 13%);
+	--paragraph:hsla(0, 0%, 100%, .75);
+	--background:hsl(0, 0%, 95%);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+/*===============
+	TYPOGRAPHY
+================*/
+
+h2{
+	color: var(--background);
+	font-size: 3rem;
+	font-family: 'Big Shoulders Display', sans-serif;
+	font-weight: 700;
+}
+
+p{
+	color: var(--paragraph);
+	font-size: .8rem;
+	font-family: Lexend Deca, sans-serif;
+}
+
+button{
+	font-family:Lexend Deca, sans-serif ;
+	font-size: 1rem;
+	cursor: pointer;
+	border: solid 1.5px var(--background);
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	padding-top: 5em;
+}
+
+/*===============
+	LAYOUT
+================*/
+body{
+	background: var(--background);
+}
+.container{
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.flex-container{
+	display: flex;
+	flex-direction: row;
+}
+
+
+section{
+	width: 33%;
+	padding: 2em 3em;
+	display: flex;
+	flex-direction: column;
+}
+
+
+section img{
+	order: -1;
+	width: 50%;
+	min-width: 70px;
+}
+
+section h2{
+	margin-bottom: 0;
+}
+
+section p{
+	margin-bottom: 7em;
+}
+
+section button{
+	width: 90%;
+	min-width: 120px;
+	margin-bottom: 1em;
+	padding: 1.3em 1em;
+	border-radius: 30px;
+	background: var(--background);
+}
+
+
+@media (max-width: 700px){
+	body{
+		padding: 0;
+	}
+
+	p{
+		font-size: 1rem;
+	}
+
+	.container{
+		padding: 0;
+		width: 100%;
+		margin: 0;
+	}
+	.flex-container{
+		flex-direction: column;
+	}
+
+	section{
+		width: 100%;
+	}
+}
+
+#sedans button{
+	color: var(--cyan);
+}
+
+#suvs button{
+	color: var(--orange);
+}
+
+#luxury button{
+	color: var(--dark-cyan);
+}
+
+section button:hover,
+section button:focus{
+	background: transparent;
+	color: white !important;
+}
+
+#sedans{
+	background: var(--cyan);
+}
+
+#suvs{
+	background: var(--orange);
+}
+
+#luxury{
+	background: var(--dark-cyan);
+}
+
+.attribution{
+	margin: auto;
+	margin-top: 5em;
+}
